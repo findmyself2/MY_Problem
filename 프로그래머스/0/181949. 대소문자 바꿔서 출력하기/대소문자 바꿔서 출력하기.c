@@ -1,0 +1,33 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+#define LEN_INPUT 20
+
+int main(void) {
+
+	char s1[LEN_INPUT];
+	scanf("%s", &s1);
+	
+	for (int i = 0; i < LEN_INPUT; i++)
+	{
+		//소 -> 대
+		if (s1[i] >= 'a' && s1[i] <= 'z')
+		{
+			
+			s1[i] -= 32;
+		}
+		else if (s1[i] >= 'A' && s1[i] <= 'Z')
+
+		//대 -> 소
+		{
+			s1[i] += 32;
+
+		}
+
+
+	}
+	
+	printf("%s", s1);
+
+	return 0;
+
+}
